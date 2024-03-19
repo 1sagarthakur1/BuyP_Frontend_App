@@ -1,0 +1,132 @@
+.main_container_payment{
+    margin: 5px 30px 0px 30px;
+    min-height: 100vh;
+}
+.product{
+    background-color: rgba(128, 128, 128, 0.107);
+    border-radius: 5px;
+    padding:5px;
+    gap: 5px;
+}
+.product p{
+    color: gray;
+    font-size: .8rem;
+}
+.product_details>img{
+    width: 100px;
+}
+.product_details{
+    padding: 5px;
+    flex-grow: 1;
+    background-color: white;
+    min-height: 100px;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+}
+.product_details>div{
+    background-color: white;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+.product_details>div> h3{
+    font-size: 1rem;
+    font-weight:400;
+    color:black;
+}
+.product_price{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.product_price> h4{
+    color: #0C2D57;
+}
+.product_total_price_quantity{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.total_price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.total_price>h3{
+    color: #0C2D57;
+}
+.main_container_payment>h4{
+    margin: 5px 0px;
+}
+.payment_option_form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment_option{
+    background-image: linear-gradient(to left bottom, #7c377b, #b13576, #dc3d62, #ea505f, #f5645c, #ff775a, #ff8572, #ff9388, #ffa19d, #ffb0b0);
+    padding: 5px;
+    border-radius:5px;
+    color: white;
+    /* height: 100px; */
+}
+.payment_option div{
+    display: flex;
+    gap: 10px;
+    margin:5px 5px 5px 20px;
+}
+.first_label{
+    font-weight: 600;
+    color: #0C2D57;
+    margin-left: 10px;
+}
+.second_label{
+    font-size: .8rem;
+}
+.countinue_doOrderButt{
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    color: white;
+    background-color:#0C2D57;
+    border-radius:5px;
+    margin:10px 0px;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    transition: 1s;
+}
+
+.countinue_doOrderButt_when_D{
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    color: rgb(183, 194, 221);
+    background-color:#4f6c92;
+    border-radius:10px 0px;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    transition: 1s;
+}
+
+
+@media (max-width: 767px) {
+    .main_container_payment{
+        margin: 40px 10px 0px 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 940px) {
+    
+
+}
+
+@media (min-width: 1024px) {
+
+}

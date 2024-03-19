@@ -1,0 +1,17 @@
+.homePage{
+    height: 1000px;
+    margin:10px 0px 0px 0px;
+}
+
+@media (max-width: 767px){
+    .homePage{
+        margin:40px 0px 0px 0px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+
+}
+@media (min-width: 1024px) {
+
+}
+

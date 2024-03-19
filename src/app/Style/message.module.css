@@ -1,0 +1,46 @@
+.main_containerMessage{
+    background-image: linear-gradient(to top, #779dcd, #a1b3d9, #c4cbe6, #e4e4f2, #ffffff);
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: #0C2D57;
+    position: fixed;
+    top:-100px;
+    left:calc(50% - 100px);
+    z-index: 9999999;
+    transition: 2s;
+}
+
+.main_containerWarning{
+    background-color: rgb(215, 235, 215);
+    width: 100%;
+    /* text-align: center; */
+    border: 2px double gray;
+    border-radius: 5px;
+    color: #0C2D57;
+    position: fixed;
+    top:-100px;
+    left:0;
+    z-index: 9999999;
+    transition: 2s;
+}
+
+.main_containerWarning>p{
+    font-size: .7rem;
+    margin: 5px;
+}
+
+@media (max-width: 767px){
+    /* .main_containerWarning{
+        
+    } */
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+}
+@media (min-width: 1024px) {
+
+}

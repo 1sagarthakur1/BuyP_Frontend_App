@@ -1,0 +1,167 @@
+.therd_div_account{
+    display: flex;
+    flex-direction: column;
+    
+    /* margin: 0px 30px 0px 30px; */
+}
+.therd_div_account h4{
+    margin: 0;
+    color:#FC6736;
+}
+.therd_div_account p{
+    margin: 0;
+    color: gray;
+    font-size: .8rem;
+    
+}
+.therd_div_account > button{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    /* justify-content: center; */
+    color: #0C2D57;
+    font-weight: 600;
+    width: 130px;
+    gap: 10px;
+    border: 0px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FFB0B0;
+}
+
+.address{
+    border-radius:10px;
+    margin-bottom: 15px;
+}
+
+.address >div:first-child{
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    background-color: #FFB0B0;
+}
+.address > div:first-child h5{
+    display: flex;
+    margin:2px 0px 2px 5px;
+    color: #0C2D57;
+}
+
+.address > div:first-child div{
+    display: flex;
+    gap: 10px;
+    margin:2px 5px 2px 0px;
+    color: #0C2D57;
+}
+
+.savebutt_foradd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 80px;
+    height:27px;
+    background-color: #0C2D57;
+    color:white;
+    border: 4px double white;
+    border-radius: 5px;
+}
+.saveButt_forUPDATE{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 80px;
+    height:27px;
+    background-color: #0C2D57;
+    color:white;
+    border: 4px double white;
+    border-radius: 5px;
+}
+.eidtButt_Address{
+    background-color:transparent;
+    border: 0px;
+}
+.eidtButt_Address{
+    background-color:transparent;
+    border: 0px;
+}
+.deleteButt_Address{
+    background-color:transparent;
+    border: 0px;
+}
+
+.address_inner_div{
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solid #FFB0B0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.description{
+    display: flex;
+    flex-direction: column;
+}
+.description label{
+    color: gray;
+    font-size: .8rem;
+}
+
+.description textarea{
+    font-family:Arial, Helvetica, sans-serif nm;
+    max-height:200px;
+    min-width: 250px;
+    max-width:200px;
+    min-height: 80px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.add1 label{
+    font-size:.8rem;
+    color:gray;
+}
+.add1 input{
+    width: auto;
+    outline: none;
+    background-color: transparent;
+    border:0px;
+}
+.add1 input:focus{
+    background-color: transparent;
+    border-bottom: 1px solid black;
+}
+
+.cancel_button{
+    background-color: transparent;
+    border: 0px;
+    color: #0C2D57;
+}
+
+
+input.pincod_input::-webkit-inner-spin-button,
+input.pincod_input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@media (max-width: 767px){
+    /* .therd_div_account{
+        margin: 2px 5px 0px 5px;
+    } */
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+}
+@media (min-width: 1024px) {
+
+}

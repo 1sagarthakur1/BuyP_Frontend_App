@@ -1,0 +1,89 @@
+.main_ContainerSection2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 50px;
+    gap: 40px;
+}
+.main_ContainerSection_firsDiv{
+    max-width: 500px;
+}
+
+.main_ContainerSection_firsDiv>h2{
+    color:#0c2d57;
+}
+.main_ContainerSection_firsDiv>p{
+    font-size: .8rem;
+    color:gray;
+}
+.container {
+    width: fit-content;
+    position: relative;
+
+}
+
+.container>div:nth-child(1) {
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    border-radius: 24% 40% 34% 55%;
+    background-image: linear-gradient(to left top, #0c2d57, #573775, #a0367a, #dc3d62, #fc6736);
+    box-shadow: 2px 20px 45px #0c2d57;
+
+}
+
+
+.container>div:nth-child(2) {
+    top: 70px;
+    left: 70px;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(255, 0, 89);
+    position: absolute;
+    border-radius: 80% 30% 94% 53%;
+    background-image: linear-gradient(to right bottom, #051937, #46285c, #902c6a, #d3395c, #fc6736);
+    animation-name: div2;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px white;
+
+}
+
+@keyframes div2 {
+    0% {
+        border-radius: 64% 40% 34% 55%;
+    }
+
+    25% {
+        border-radius: 41% 30% 36% 30%;
+    }
+
+    50% {
+        border-radius: 70% 50% 34% 65%;
+    }
+
+    75% {
+        border-radius: 41% 30% 76% 20%;
+    }
+
+    100% {
+        border-radius: 64% 40% 34% 55%;
+    }
+}
+
+@media (max-width: 940px){
+    .main_ContainerSection_firsDiv{
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+}
+@media (min-width: 1024px) {
+
+}

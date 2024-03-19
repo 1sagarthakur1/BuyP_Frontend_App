@@ -1,0 +1,8 @@
+.section1_mainContainer{
+    margin:10px 5px;
+}
+
+.section1_InnerContainer{
+    height: 200px;
+    border: 1px solid black;
+}

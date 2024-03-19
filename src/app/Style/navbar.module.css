@@ -1,0 +1,177 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    background-color: #0C2D57;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
+
+.navbarBrand {
+    display: flex;
+}
+
+.navbarBrand a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navdiv{
+    width: 50%;
+    top: 55px;
+    margin: auto 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    gap: 5px;
+}
+.navdiv>div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.navdiv>div:nth-child(2){
+   background-color: white;
+   color: black;
+   /* padding: 5px; */
+}
+.navdiv>div:nth-child(1)>button{
+    background-color: transparent;
+    border: 0px;
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin-right: 5px;
+}
+.suggestions_Ul>li{
+    font-size: .8rem;
+    padding: 5px;
+    list-style-type:none;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    cursor: pointer;
+}
+
+.searchBar{
+    flex-grow: 1;
+    height: 97%;
+    padding-left: 5px;
+}
+.home_inNavbar{
+    display: block;
+}
+
+
+
+
+.rigth_navpart {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    gap: 20px;
+}
+
+.navUserLog_andName{
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+.navUserLog_andName h5{
+    margin: 0;
+    font-size: 8px;
+}
+
+.LSbutton{
+    margin-left: 10px;
+    filter: drop-shadow(1px 1px 1px white);
+    cursor: pointer;
+}
+
+
+
+
+.cart_iconContainer {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.cart_iconContainer>svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+.cart_iconContainer>p {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #FC6736;
+    color: white;
+    left: 60%;
+    bottom: 50%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: .8rem;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .home_inNavbar{
+        display: none;
+    }
+    .navbar{
+        height: 50px;
+    }
+
+    .searchBar{
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #FC6736;
+        outline: none;
+        margin-left: 5px;
+    }
+    .searchBar:focus{
+        height: 25px;
+        border-radius: 5px;
+        border: 2px solid #FC6736;
+        outline: none;
+    }
+    .navdiv{
+        width: 100%;
+        position: absolute;
+        top: 52px;
+        margin: 0;
+        background-color: #FFB0B0;
+        border-radius: 0px;
+        height: 30px;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .navbar {
+        padding: 0.5rem;
+    }
+}
