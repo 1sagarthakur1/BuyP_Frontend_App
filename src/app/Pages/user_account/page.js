@@ -272,7 +272,7 @@ export default function User_account() {
                         <Address />
                     </div>
                     <button onClick={() => logoutUser()} className={style.logoutButt}>Log Out</button>
-                    <div style={{ margin: "0px 0px 50px 0px" }}>
+                    <div style={{ margin: "0px 0px 60px 0px" }}>
                     </div>
                 </>
             )}
