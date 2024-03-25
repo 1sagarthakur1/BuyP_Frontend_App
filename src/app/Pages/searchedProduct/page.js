@@ -11,7 +11,7 @@ import style2 from '../../Style/cart.module.css';
 import BASE_URL from '@/appConfig';
 
 
-export default function page() {
+export default function Searched_product() {
   const searchParams = useSearchParams();
 
   const mobile_brand = searchParams.get('mobile_brand');
@@ -41,7 +41,7 @@ export default function page() {
 
     getallProdurct();
 
-  }, [searchQuery])
+  }, [searchQuery,query])
 
 
   return (
@@ -59,8 +59,8 @@ export default function page() {
                 <p>This product not found some issue is there ...</p>
               </div>
             ) : (
-              productArray.map((pro) => (
-                <Link href={{ pathname: '../../Pages/product', query: { "id": (pro._id) } }}>
+              productArray.map((pro,index) => (
+                <Link key={index} href={{ pathname: '../../Pages/product', query: { "id": (pro._id) } }}>
                   <SearchedProduct data={pro} />
                 </Link>
               ))

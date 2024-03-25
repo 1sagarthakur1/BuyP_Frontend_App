@@ -4,6 +4,7 @@ import style from '../../Style/Category.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import iphonePoster from '../../Images/iphonePoster.jpg';
 
 export let data = "";
 
@@ -17,7 +18,7 @@ export default function Section1() {
     return (
         <div className={style.main_container_CategoryPage}>
             <div>
-                <img src='https://i.ytimg.com/vi/CWEX2RWGVbI/maxresdefault.jpg' />
+                <Image src={iphonePoster} width={100} height={20} alt='not found'/>
             </div>
             <div>
                 <div className={style.mobile_logoContainer}>

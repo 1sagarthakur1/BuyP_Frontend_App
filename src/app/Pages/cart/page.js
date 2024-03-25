@@ -12,7 +12,7 @@ import Warning from '@/app/Components/Warning';
 import BASE_URL from '@/appConfig';
 
 
-export default function page() {
+export default function Cart() {
   const [otpMessageVisbal, setOtpMessageVisbal] = useState("-100px");
   const [otpMessage, setOtpMessage] = useState(null);
 
@@ -104,8 +104,8 @@ export default function page() {
           {arrayOfAllProduct != null ? (
             <>
               <div>
-                {arrayOfAllProduct.map((product) => (
-                  <div className={style2.product}>
+                {arrayOfAllProduct.map((product,index) => (
+                  <div key={index} className={style2.product}>
                     <span className={style.span_forCardContainer}>
                       <div>
                         <p>Add date</p>
@@ -135,7 +135,7 @@ export default function page() {
           ) : (
             <div className={style.background}>
               <h1>! Ops cart is empty</h1>
-              <Image src={emptyTroly} width={200} />
+              <Image src={emptyTroly} width={200} alt='not found'/>
               <p>You have zero items on your card</p>
               <Link href={'../'}>
                 <button>Add product</button>

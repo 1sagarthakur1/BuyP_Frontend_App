@@ -4,7 +4,7 @@ import '../../globals.css'
 import Section1 from '@/app/Components/Category/Section1'
 import Section2 from '@/app/Components/Home/Section2'
 
-export default function page() {
+export default function Category() {
   return (
     <div>
       <Section1/>

@@ -8,35 +8,35 @@ import Loder from '@/app/Components/Loder';
 import Warning from '@/app/Components/Warning';
 import BASE_URL from '@/appConfig';
 
-export default function page({ searchParams }) {
+export default function Payment({ searchParams }) {
   const [otpMessageVisbal, setOtpMessageVisbal] = useState("-100px");
   const [otpMessage, setOtpMessage] = useState(null);
-
-  const router = useRouter();
-
-  if (searchParams.product_id == undefined) {
-    router.push('/')
-  }
-  if (searchParams.product_id == undefined) {
-    return <Loder />;
-  }
-
   const [paymentType, setPaymentType] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [token, setCookieValue] = useState('');
 
+  const router = useRouter();
+
   useEffect(() => {
-    // Function to get cookie value by name
-    const getCookie = (name) => {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-    };
+    if (searchParams.product_id === undefined) {
+      router.push('/');
+    } else {
+      // Function to get cookie value by name
+      const getCookie = (name) => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      };
 
-    const yourCookieValue = getCookie('token');
+      const yourCookieValue = getCookie('token');
 
-    setCookieValue(yourCookieValue);
-  }, []);
+      setCookieValue(yourCookieValue);
+    }
+  }, [searchParams.product_id, router]);
+
+  if (searchParams.product_id === undefined) {
+    return <Loder />;
+  }
 
   const handlePaymentTypeChange = (e) => {
     setPaymentType(e.target.value);

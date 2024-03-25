@@ -7,18 +7,21 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Loder from '@/app/Components/Loder'
 
-export default function page({ searchParams }) {
+export default function Do_order({ searchParams }) {
+  const [receivedData, setReceivedData] = useState(null);
+  const [address_type, setAddress_type] = useState(null)
 
   const router = useRouter();
-  if (searchParams.product_name == undefined) {
-    router.push('/')
-  }
-  if (searchParams.product_name == undefined) {
+  useEffect(() => {
+    if (searchParams.product_name === undefined) {
+      router.push('/');
+    }
+  }, [searchParams.product_name, router]);
+
+  if (searchParams.product_name === undefined) {
     return <Loder/>;
   }
 
-  const [receivedData, setReceivedData] = useState(null);
-  const [address_type, setAddress_type] = useState(null)
 
   const receiveDataFromAddress = (address_type, data) => {
     setReceivedData(data);

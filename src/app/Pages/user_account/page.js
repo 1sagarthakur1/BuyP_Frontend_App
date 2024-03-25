@@ -10,7 +10,7 @@ import Loder from '@/app/Components/Loder'
 import Warning from '@/app/Components/Warning';
 import BASE_URL from '@/appConfig';
 
-export default function page() {
+export default function User_account() {
 
     const [otpMessageVisbal, setOtpMessageVisbal] = useState("-100px");
     const [otpMessage, setOtpMessage] = useState(null);
@@ -191,7 +191,7 @@ export default function page() {
 
             // alert(newData.message);
             setOtpMessage(newData.message)
-            
+
             document.cookie = 'token' + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
             setOtpMessageVisbal("20px")

@@ -16,7 +16,7 @@ import Warning from '@/app/Components/Warning';
 import BASE_URL from '@/appConfig';
 
 
-export default function page() {
+export default function Order() {
   const [otpMessageVisbal, setOtpMessageVisbal] = useState("-100px");
   const [otpMessage, setOtpMessage] = useState(null);
 
@@ -133,9 +133,9 @@ export default function page() {
           {
             allData.length == 0 ? (
               <div className={style4.background}>
-                <h1>! Order box is empty</h1>
+                <h1>{"! Order box is empty"}</h1>
                 {/* <Image alt="" src={emptyTroly} width={200} /> */}
-                <p>You haven't ordered anything yet</p>
+                <p>{"You haven't ordered anything yet"}</p>
                 <Link href={'../'}>
                   <button>Order now</button>
                 </Link>

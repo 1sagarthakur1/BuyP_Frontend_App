@@ -32,7 +32,6 @@ const SearchedProduct = (props) => {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -45,7 +44,7 @@ const CardProduct = (props) => {
   const hightlight = props.data.highlights.slice(0, 3);
   const image_url = props.data.images_array[0];
 
-  console.log(props.data)
+  // console.log(props.data)
   return (
 
     <div className={style2.product_details}>

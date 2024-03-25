@@ -4,7 +4,7 @@ import slidingcss from '../Style/sliding.module.css';
 import back_arrow from '../../../public/arrow_back.svg';
 import forward_arrow from '../../../public/arrow_forward.svg';
 import Image from 'next/image';
-export default function page() {
+export default function Slider() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const images = [

@@ -9,35 +9,9 @@ import Warning from '@/app/Components/Warning';
 import BASE_URL from '@/appConfig';
 
 
-export default function page({ searchParams }) {
+export default function Product({ searchParams }) {
     const [otpMessageVisbal, setOtpMessageVisbal] = useState("-100px");
     const [otpMessage, setOtpMessage] = useState(null);
-
-    const router = useRouter();
-
-    if (searchParams.id == undefined) {
-        router.push('/')
-    }
-
-    if (searchParams.id == undefined) {
-        return <Loder />;
-    }
-
-    const [token, setCookieValue] = useState('');
-
-    useEffect(() => {
-        // Function to get cookie value by name
-        const getCookie = (name) => {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-        };
-
-        const yourCookieValue = getCookie('token');
-
-        setCookieValue(yourCookieValue);
-    }, []);
-
 
     const [image, setImage] = useState("");
 
@@ -53,41 +27,67 @@ export default function page({ searchParams }) {
     const [product_color, setProduct_color] = useState(null);
     const [offer, setOffer] = useState([]);
     const [exist_quantity, setExist_quantity] = useState(0);
-    // let product1 ; 
+
+    const [token, setCookieValue] = useState('');
+
+    const [quantity, setQuantity] = useState(1);
+
+    const router = useRouter();
 
     useEffect(() => {
-        fetchData();
-    }, [])
+        if (searchParams.id == undefined) {
+            router.push('/')
+        } else {
+            const getCookie = (name) => {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            };
 
+            const yourCookieValue = getCookie('token');
 
-    const fetchData = async () => {
-        try {
-            const response = await fetch(`${BASE_URL}/api/product/getProduct_byId/${searchParams.id}`);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            setCookieValue(yourCookieValue);
 
-            const jsonData = await response.json();
-            //   console.log(jsonData.product.images_array[0])
-            if (jsonData) {
-                setProduct(jsonData.product)
-                setImage(jsonData.product.images_array[0])
-                setProduct_images(jsonData.product.images_array);
-                setProduct_name(jsonData.product.product_name);
-                setRam_rom(jsonData.product.ram_rom);
-                setHighlights(jsonData.product.highlights);
-                setBrand(jsonData.product.brand);
-                set_description(jsonData.product.description);
-                setProduct_descriptions_Image(jsonData.product.description.product_descriptions_Image);
-                setProduct_color(jsonData.product.color);
-                setOffer(jsonData.product.offer);
-                setExist_quantity(jsonData.product.quantity);
-            }
-
-        } catch (error) {
-            console.error('Error fetching data:', error);
+            const fetchData = async () => {
+                try {
+                    const response = await fetch(`${BASE_URL}/api/product/getProduct_byId/${searchParams.id}`);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+        
+                    const jsonData = await response.json();
+                    //   console.log(jsonData.product.images_array[0])
+                    if (jsonData) {
+                        setProduct(jsonData.product)
+                        setImage(jsonData.product.images_array[0])
+                        setProduct_images(jsonData.product.images_array);
+                        setProduct_name(jsonData.product.product_name);
+                        setRam_rom(jsonData.product.ram_rom);
+                        setHighlights(jsonData.product.highlights);
+                        setBrand(jsonData.product.brand);
+                        set_description(jsonData.product.description);
+                        setProduct_descriptions_Image(jsonData.product.description.product_descriptions_Image);
+                        setProduct_color(jsonData.product.color);
+                        setOffer(jsonData.product.offer);
+                        setExist_quantity(jsonData.product.quantity);
+                    }
+        
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+            };
+            
+            fetchData();
         }
-    };
+
+    }, [searchParams.id, router])
+
+
+    if (searchParams.id == undefined) {
+        return <Loder />;
+    }
+
+
 
     const addtoCart = (Pid) => {
         // useEffect(() => {
@@ -128,8 +128,6 @@ export default function page({ searchParams }) {
         // }, [token])
     }
 
-    const [quantity, setQuantity] = useState(1);
-
 
     const handleQuantityChange = (e) => {
         let newQuantity = parseInt(e.target.value);
@@ -147,7 +145,7 @@ export default function page({ searchParams }) {
 
     return (
         <>
-            <div style={{minHeight:'100vh'}}>
+            <div style={{ minHeight: '100vh' }}>
                 <div className={style.product_Main_container}>
                     <div className={style.images_for_cart}>
                         <div className={style.thumbnail_img_div}>
@@ -187,8 +185,8 @@ export default function page({ searchParams }) {
 
                         {product_color !== null ? (
                             <div>
-                                {Object.keys(product_color).map((key) => (
-                                    <div className={style.color}>
+                                {Object.keys(product_color).map((key,index) => (
+                                    <div key={index} className={style.color}>
                                         <h4>Color:</h4>
                                         <img src={product_color[key]} />
                                     </div>
@@ -279,7 +277,7 @@ export default function page({ searchParams }) {
                             {product_descriptions_Image !== null ? (Object.keys(product_descriptions_Image).map((key, index) => {
                                 if (index % 2 !== 0) {
                                     return (
-                                        <div className={style.product_descriptions_Image}>
+                                        <div key={index} className={style.product_descriptions_Image}>
                                             <p>{key}</p>
                                             <div className={style.description_image}>
                                                 <img src={product_descriptions_Image[key]} />
@@ -289,7 +287,7 @@ export default function page({ searchParams }) {
                                     )
                                 } else {
                                     return (
-                                        <div className={style.product_descriptions_Image}>
+                                        <div key={index} className={style.product_descriptions_Image}>
                                             <div className={style.description_image}>
                                                 <img src={product_descriptions_Image[key]} />
                                             </div>

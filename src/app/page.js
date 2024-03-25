@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./Style/page.module.css";
 import Slider from './Components/Slider'
 import Category from "./Components/Category";
@@ -20,8 +20,8 @@ export default function Home() {
       <div>
         <Section2/>
       </div>
-        <Message/>
-        <Warning/>
+        {/* <Message/>
+        <Warning/> */}
       <div>
         <Section1/>
       </div>

@@ -3,7 +3,7 @@ import Loder from '@/app/Components/Loder';
 import style from '../../Style/loginSignup.module.css'
 import style2 from '../../Style/loginSignup2.module.css'
 import Login from '@/app/Components/login';
-import SignUp from '@/app/Components/sginUp';
+import SignUp from '@/app/Components/SginUp';
 import shopingTroli from '../../Images/shopingTroli.png'
 import Image from 'next/image';
 
