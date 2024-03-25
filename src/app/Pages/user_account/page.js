@@ -191,6 +191,9 @@ export default function page() {
 
             // alert(newData.message);
             setOtpMessage(newData.message)
+            
+            document.cookie = 'token' + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
             setOtpMessageVisbal("20px")
             setTimeout(() => {
                 setOtpMessageVisbal("-100px")

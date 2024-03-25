@@ -59,6 +59,15 @@ const Login = () => {
 
                 if (response.message == "Login successfully") {
                     // alert("Login successully");
+                    const setCookie = (name, value, days) => {
+                        const date = new Date();
+                        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                        const expires = "expires=" + date.toUTCString();
+                        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+                      };
+                    
+                    setCookie('token', response.token, 1);
+                    
                     setOtpMessage("Login successfully")
                     setOtpMessageVisbal("20px")
                     setTimeout(() => {
