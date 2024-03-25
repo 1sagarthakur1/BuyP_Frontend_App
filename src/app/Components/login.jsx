@@ -12,7 +12,7 @@ import Warning from './Warning';
 import BASE_URL from '@/appConfig';
 
 const Login = () => {
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState('');
     const [emailFotp, setEmailFotp] = useState("");
     const [password, setPassword] = useState("");
 
@@ -319,12 +319,12 @@ const Login = () => {
                     </div>
 
                     <div className={style.otpInnercontainer} style={{ display: disableOTPblock }}>
-                        <input value={otp1} onChange={(e) => setOtp1(e.target.value)} type='text' maxlength="1" className={style.otp_input} required />
-                        <input value={otp2} onChange={(e) => setOtp2(e.target.value)} type="text" maxlength="1" className={style.otp_input} required />
-                        <input value={otp3} onChange={(e) => setOtp3(e.target.value)} type="text" maxlength="1" className={style.otp_input} required />
-                        <input value={otp4} onChange={(e) => setOtp4(e.target.value)} type="text" maxlength="1" className={style.otp_input} required />
-                        <input value={otp5} onChange={(e) => setOtp5(e.target.value)} type="text" maxlength="1" className={style.otp_input} required />
-                        <input value={otp6} onChange={(e) => setOtp6(e.target.value)} type="text" maxlength="1" className={style.otp_input} required />
+                        <input value={otp1} onChange={(e) => setOtp1(e.target.value)} type='text' maxLength="1" className={style.otp_input} required />
+                        <input value={otp2} onChange={(e) => setOtp2(e.target.value)} type="text" maxLength="1" className={style.otp_input} required />
+                        <input value={otp3} onChange={(e) => setOtp3(e.target.value)} type="text" maxLength="1" className={style.otp_input} required />
+                        <input value={otp4} onChange={(e) => setOtp4(e.target.value)} type="text" maxLength="1" className={style.otp_input} required />
+                        <input value={otp5} onChange={(e) => setOtp5(e.target.value)} type="text" maxLength="1" className={style.otp_input} required />
+                        <input value={otp6} onChange={(e) => setOtp6(e.target.value)} type="text" maxLength="1" className={style.otp_input} required />
                     </div>
 
                     <div>
