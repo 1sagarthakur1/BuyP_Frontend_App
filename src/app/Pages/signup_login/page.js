@@ -4,7 +4,7 @@ import style2 from '../../Style/loginSignup2.module.css'
 import Login from '@/app/Components/login';
 import shopingTroli from '../../Images/shopingTroli.png'
 import Image from 'next/image';
-import SignUp from '@/app/Components/SginUp';
+import SignUp from '@/app/Components/SignUp';
 
 
 let css;
