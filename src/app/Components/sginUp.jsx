@@ -9,7 +9,7 @@ import Warning from './Warning';
 import BASE_URL from '@/appConfig'
 
 
-export default function Signup() {
+export default function SignUp() {
     const [username, setUsrename] = useState("");
     const [dateOfBirth, setDob] = useState("");
     const [gender, setGender] = useState("");
