@@ -4,7 +4,7 @@ import style2 from '../../Style/loginSignup2.module.css'
 import Login from '@/app/Components/login';
 import shopingTroli from '../../Images/shopingTroli.png'
 import Image from 'next/image';
-import Signup from '@/app/Components/SginUp';
+import SignUp from '@/app/Components/SginUp';
 
 
 let css;
@@ -23,7 +23,7 @@ const Login_SignUpPage = ({ searchParams }) => {
                 <Image className={css.signup_img} src={shopingTroli} alt="" />
                 {
                     searchParams.Page == "SignUp" ? (
-                        <Signup/>
+                        <SignUp/>
                     ) : (
                         <Login />
                     )
