@@ -323,7 +323,7 @@
 
 @media (max-width: 767px) {
     .MainContainer_login_signup{
-        margin: 60px 20px;
+        margin: 60px 5px;
         display: flex;
         flex-wrap: wrap;
         justify-content:center;
