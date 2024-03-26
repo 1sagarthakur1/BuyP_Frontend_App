@@ -20,8 +20,6 @@ export default function Home() {
       <div>
         <Section2/>
       </div>
-        {/* <Message/>
-        <Warning/> */}
       <div>
         <Section1/>
       </div>

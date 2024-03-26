@@ -13,6 +13,9 @@
 .main_ContainerSection_firsDiv>h2{
     color:#0c2d57;
 }
+.main_ContainerSection_firsDiv>h3{
+    color:#0c2d57;
+}
 .main_ContainerSection_firsDiv>p{
     font-size: .8rem;
     color:gray;
@@ -49,7 +52,11 @@
     animation-direction: reverse;
     overflow: hidden;
     box-shadow: 2px 2px 2px white;
+}
 
+.container>div:nth-child(2)>img {
+    margin-top: 50px;
+    width: 100%;
 }
 
 @keyframes div2 {

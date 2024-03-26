@@ -30,12 +30,6 @@ export default function Category() {
             </Link>
             <Link href="/Pages/category">
                 <div>
-                    <img alt="" src="https://rukminim1.flixcart.com/flap/80/80/image/ab7e2b022a4587dd.jpg?q=100" />
-                    <h5>Home & Furniture</h5>
-                </div>
-            </Link>
-            <Link href="/Pages/category">
-                <div>
                     <img alt="" src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/0139228b2f7eb413.jpg?q=100" />
                     <h5>Appliances</h5>
                 </div>

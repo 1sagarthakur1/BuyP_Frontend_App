@@ -18,7 +18,7 @@ export default function Section1() {
     return (
         <div className={style.main_container_CategoryPage}>
             <div>
-                <Image src={iphonePoster} width={100} height={20} alt='not found'/>
+                <img src={'https://i.ytimg.com/vi/CWEX2RWGVbI/maxresdefault.jpg'}  alt='not found'/>
             </div>
             <div>
                 <div className={style.mobile_logoContainer}>
