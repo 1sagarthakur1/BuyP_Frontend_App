@@ -14,6 +14,7 @@
 }
 .product_details>img{
     width: 100px;
+    object-fit: contain;
 }
 .product_details{
     padding: 5px;

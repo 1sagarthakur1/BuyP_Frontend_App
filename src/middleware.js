@@ -4,6 +4,7 @@ import BASE_URL from "./appConfig";
 export async function middleware(request) {
     let token = 'worngtokent';
     const tokenkey = request.cookies.get('token');
+
     if (tokenkey !== undefined) {
         token = tokenkey.value;
     }
