@@ -1,0 +1,24 @@
+.loding{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    
+}
+.loding>img{
+    width: 200px;
+    height: 80px;
+}
+.loding>h3{
+    font-weight: bold;
+    background: linear-gradient(to right, #fe8708, hsl(324, 97%, 46%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
